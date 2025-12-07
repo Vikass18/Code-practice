@@ -1,23 +1,22 @@
-var addfriendBtn = document.querySelector("#add-friend-btn");
+var card = document.querySelector("#card");
 
-var flag = 0;
+var heartIcon = document.querySelector("#love");
 
-var h5 = document.querySelector("h5");
+card.addEventListener("dblclick", function () {
+  heartIcon.style.transform = 'translate(-50%, -50%) scale(1) rotate(0deg)'
+  heartIcon.style.opacity = '0.8';
 
-addfriendBtn.addEventListener("click", function () {
-  if (flag === 0) {
-  h5.textContent = "Friend Added";
-  h5.style.color = "green";
-  flag = 1;
+  setTimeout(() => {
+    heartIcon.style.transform = 'translate(-50%, -300%) scale(1.2) rotate(60deg)'
+  } ,800);
 
-  addfriendBtn.textContent = "Remove Friend";
-  addfriendBtn.style.backgroundColor = "#da190b";
-  } else {
-  h5.textContent = "Stranger";
-  h5.style.color = "red";
-  flag = 0;
-  addfriendBtn.textContent = "Add Friend";
-  addfriendBtn.style.backgroundColor = "#4CAF50";
-  }
+  setTimeout(() => {
+    heartIcon.style.opacity = '0';
+}, 1000);
+
+  setTimeout(() => {
+  heartIcon.style.transform = 'translate(-50%, -50%) scale(0) rotate(-60deg)'  
+}, 1200);
+
 });
 
