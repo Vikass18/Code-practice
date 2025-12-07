@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: cornflowerblue;
+  gap: 20px;
+
+  #card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    width: 300px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+
+    img {
+      height: 50%;
+      width: 50%;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      align-items: center;
+    }
+
+    #social {
+      h4 {
+        font-family: Arial, sans-serif;
+        color: #555;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    p {
+      text-align: center;
+      margin-top: 5px;
+      font-family: Arial, sans-serif;
+      color: #777;
+    }
+    h5 {
+      text-align: center;
+      margin-top: 5px;
+      font-family: Arial, sans-serif;
+      color: #ff0000;
+    }
+    #btn-container {
+      margin-top: auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        padding: 10px 10px;
+        border: none;
+        border-radius: 5px;
+        font-family: Arial, sans-serif;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &#add-friend-btn {
+          background-color: #4caf50;
+          color: white;
+
+          &:hover {
+            background-color: #45a049;
+            cursor: pointer;
+          }
+
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+
+        &#remove-btn {
+          background-color: #f44336;
+          color: white;
+
+          &:hover {
+            background-color: #da190b;
+            cursor: pointer;
+          }
+          &:active {
+            transform: scale(0.95);
+          }
+        }
+
+        &#message-btn {
+          background-color: #008cba;
+          color: white;
+
+          &:hover {
+            background-color: #007bb5;
+            cursor: pointer;
+          }
+          &:active {
+            transform: scale(0.95);
+          }              
+        }
+      }
+    }
+  }
+}
