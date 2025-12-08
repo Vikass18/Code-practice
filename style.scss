@@ -10,54 +10,29 @@ body {
   width: 100%;
 }
 
-main {
+
+#main{
   height: 100%;
   width: 100%;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+   
+  .cursor {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    mix-blend-mode: difference;
+    border-radius: 50%;
+    position: absolute;
+    transition: linear 0.2s;
+    transform: translate(-50%, -50%);
+    // pointer-events: none;
+  }
 
-  #card {
-    height: 400px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    background-color: #c49090;
-    position: relative;
-    overflow: hidden;
-
-    div {
-      height: 100%;
-      width: 100%;
-      position: relative;
-      overflow: hidden;
-
-      img {
-        height: 100%;
-        width: 100%;
-        border-radius: 10px;
-        object-fit: cover;
-        object-position: center;
-      }
-
-      i {
-        color: white;
-        font-size: 5rem;
-        // font-weight: 200;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        opacity: 0;
-
-        background-image: url(https://t3.ftcdn.net/jpg/01/14/77/58/360_F_114775804_4yfG9qbKp1NlF1RLo4MUlGIVj9MWhnnc.jpg);
-        background-size: cover;
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        transform: translate(-50%, -50%) scale(0);
-        transition: all cubic-bezier(0.65, 1, 0.77, 1.44) 0.4s;
-      }
-    }
+  h1{
+    font-size: 5rem;
+    color: white;
   }
 }
