@@ -2,33 +2,30 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: #ffffff;
 }
 
 html,
 body {
   height: 100%;
   width: 100%;
+  background-color: rgb(0, 0, 0);
 }
 
-#main {
+:root {
+  --x: 200px;
+  --y: 200px;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  background-image: url(https://imgs.search.brave.com/jwTExhMbM31NGOyzL5l2hfpIZmsSay3hGYPXXYvAt6A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vdGhlZnV0/dXJlb2Z0aGVmb3Jj/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjUvMTAvU3Ry/YW5nZXItVGhpbmdz/LTUtT2ZmaWNpYWwt/UG9zdGVyLUhlYWRl/ci1GVVRVUkUtT0Yt/VEhFLUZPUkNFLmpw/Zz9maXQ9MTAyNCw1/NzYmc3NsPTE);
+  background-size: cover;
+  background-position: center;
+}
+main .box {
   height: 100%;
   width: 100%;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#main .cursor {
-  height: 20px;
-  width: 20px;
-  background-color: white;
-  mix-blend-mode: difference;
-  border-radius: 50%;
-  position: absolute;
-  transition: linear 0.2s;
-  transform: translate(-50%, -50%);
-}
-#main h1 {
-  font-size: 5rem;
-  color: white;
+  background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.952) 80%);
 }/*# sourceMappingURL=style.css.map */
