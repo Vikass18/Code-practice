@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #ffffff;
 }
 
 html,
@@ -10,22 +9,56 @@ body {
   height: 100%;
   width: 100%;
   background-color: rgb(0, 0, 0);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-:root {
-  --x: 200px;
-  --y: 200px;
+@property --rotate {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
-
+@keyframes rotate {
+  from {
+    --rotate: 0deg;
+  }
+  to {
+    --rotate: 360deg;
+  }
+}
 main {
-  height: 100vh;
-  width: 100vw;
-  background-image: url(https://imgs.search.brave.com/jwTExhMbM31NGOyzL5l2hfpIZmsSay3hGYPXXYvAt6A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vdGhlZnV0/dXJlb2Z0aGVmb3Jj/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjUvMTAvU3Ry/YW5nZXItVGhpbmdz/LTUtT2ZmaWNpYWwt/UG9zdGVyLUhlYWRl/ci1GVVRVUkUtT0Yt/VEhFLUZPUkNFLmpw/Zz9maXQ9MTAyNCw1/NzYmc3NsPTE);
-  background-size: cover;
-  background-position: center;
-}
-main .box {
   height: 100%;
   width: 100%;
-  background: radial-gradient(150px at var(--x) var(--y), rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.952) 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .box {
+  width: 300px;
+  padding-inline: 10px;
+  padding-bottom: 10px;
+  background-color: var(--bgcolor);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 0px rgb(255, 0, 0);
+  background: linear-gradient(black) padding-box, conic-gradient(from var(--rotate), rgb(0, 0, 0), rgb(255, 0, 0), rgb(0, 0, 0)) border-box;
+  border: 0px solid rgba(255, 255, 255, 0);
+  margin: 10px;
+  animation: rotate 5s linear infinite;
+  animation-play-state: paused;
+  transition: all 0.3s linear;
+  color: whitesmoke;
+  text-shadow: 0 0 0 rgba(253, 0, 0, 0.842);
+}
+main .box:hover {
+  animation-play-state: running;
+  border-width: 5px;
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.479);
+  color: rgba(253, 0, 0, 0.842);
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.884);
+}
+main .box img {
+  width: 100%;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
