@@ -1,0 +1,63 @@
+.card {
+    height: 450px;
+    width: 300px;
+    /* background-color: red; */
+    background: #76767ce1;
+    border-radius: 20px;
+    position: relative;
+}
+
+.coverImage {
+    height: 15vh;
+    width: 100%;
+    /* background-color: aqua; */
+    position: relative;
+}
+
+.coverImage img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.profileImage {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    /* background-color: bisque; */
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profileImage img {
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.details{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    top: 50px;
+    text-align: center;padding: 10px;
+}
+
+.status{
+    /* background-color: blue; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+    top: 120px;
+    font-weight: 500;
+}
